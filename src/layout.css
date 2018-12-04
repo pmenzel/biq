@@ -1,0 +1,196 @@
+body {
+  /*background:#f0f0f0;*/
+  background:#59568b;
+}
+
+#header {
+	/*background:#FF7F5E;*/
+	background:#af9ac8;
+}
+
+#leftcol .box {
+	/*background:#8DDBB3;*/
+	background:#ca88ad;
+}
+#midcol .box {
+	/*background:#CEFFAD;*/
+	background:#ca88ad;
+}
+#rightcol .box {
+	/*background:#FFFF9D;*/
+	background:#ec9cb0;
+}
+
+.box {
+	padding:5px 5px 5px 10px;
+	background: #d0d0d0;
+	margin-bottom:5px;
+	border-radius: 5px;
+	border:1px solid #aaa;
+}
+
+#globalerrorbox {
+	background:#d277a6;
+}
+
+
+.SRR_table, .griddle-table {
+	margin-top:10px;
+	border-collapse: collapse;
+}
+
+.griddle-pagination {
+	text-align:left;
+}
+.griddle-filter {
+	float:left;
+}
+
+#outer {
+	padding:5px 10px 0px;
+}
+
+#header {
+	height:60px;
+}
+
+#headerright {
+	float:right;
+	margin-right:10px;
+	text-align:right;
+}
+
+#leftcol {
+	width: 31vw;
+	float:left;
+}
+
+#div_searchresults {
+	max-height:calc(100vh - 200px);
+	overflow:auto;
+}
+
+#container_transcripts {
+	max-height:calc(100vh - 200px);
+	overflow:auto;
+}
+
+#midcol {
+	width: 34vw;
+	margin:auto;
+}
+
+#container_geneinfo {
+	height:80px;
+}
+
+#container_genesearch {
+	min-height:80px;
+}
+
+#KmerQueryListDiv {
+	min-height:65px;
+}
+
+#rightcol {
+	width: 31vw;
+	float:right;
+}
+
+
+#clearResultsImg {
+	width:30px;
+}
+
+.closeIcon img {
+	cursor:pointer;
+	width:20px;
+}
+
+.closeIcon {
+	text-align:right;
+	padding:0;
+  float: right;
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+#KmerQueryListSearchButtonDiv {
+	padding:0;
+  float: right;
+  position: relative;
+  right: 33px;
+}
+
+#rightHeader {
+	padding:0;
+  float: right;
+  position: relative;
+  max-width: 60px;
+  top: 10px;
+  right: 5px;
+}
+#forkme_banner {
+  display: block;
+  position: absolute;
+	text-decoration:none;
+  top:0px;
+  right: 0px;
+  z-index: 10;
+  padding: 10px 42px 10px 10px;
+  color: #fff;
+  background: url('./images/blacktocat.png') #626096 no-repeat 95% 50%;
+  /*background: url('./images/blacktocat.png') #0090ff no-repeat 95% 50%;*/
+  font-weight: 700;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.dropdownMode {
+  display: block;
+  position: absolute;
+	text-decoration:none;
+  top:1px;
+  width:190px;
+  vertical-align:center;
+  right: 400px;
+  z-index: 10;
+  padding: 0px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+
+.dropdownGenome {
+  display: block;
+  position: absolute;
+	text-decoration:none;
+  top:1px;
+  width:230px;
+  vertical-align:center;
+  right: 150px;
+  z-index: 10;
+  padding: 0px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+
+#KmerQueryList {
+	max-width:18em;
+}
+
+#loading {
+	padding-top:20px;
+	display:block;
+	margin:auto;
+	width:100px;
+}
