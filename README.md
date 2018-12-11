@@ -9,6 +9,8 @@ The main use case is to identify experiments in which a particular circular RNA,
 
 BIQ builds on top of [KIQ](https://github.com/pmenzel/kiq), a software for indexing and querying k-mers in sequencing data sets.
 
+![Flow chart](flowchart/BIQ_flow.png?raw=true "BIQ flow chart")
+
 An example installation can be found at [e-rna.org](http://e-rna.org/biq/) or at [GitHub](https://pmenzel.github.io/biq/).  
 It contains two BSJ indezes:
 1. Drosophila melanogaster, 103 RNA-Seq datasets from [Westholm et al 2014](https://www.ncbi.nlm.nih.gov/pubmed/25544350).

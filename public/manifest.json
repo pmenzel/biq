@@ -1,6 +1,6 @@
 {
   "short_name": "BIQ",
-  "name": "BIQ",
+  "name": "BIQ: Back-splice junction indexing and querying",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
