@@ -35,24 +35,32 @@ class KmerSearchResult extends React.Component {
     }
 		let csvData;
 		let columnDefs = [];
+		let inLinear = false;
+		let csv_filename = "BIQ_output.csv";
 		if(this.props.data.query !== undefined) { // single kmer query case
-			csvData = [ ['ID', 'readcount', 'rpm'] ];
+			csvData = [ ['ID', 'readcount', 'rpm', 'description'] ];
 			for(let i = 0; i < this.props.data.experiments.length; i++) {
 				let srr = this.props.data.experiments[i];
-				csvData.push([srr.name, srr.count, srr.rpm]);
+				if(srr.name==="_LINEAR") { inLinear = true; this.props.data.experiments.splice(i,1); continue;} // remove _LINEAR from the result table
+				csvData.push([srr.name, srr.count, srr.rpm, srr.desc]);
 			}
-			columnDefs.push(<ColumnDefinition id="name" title="Name" order={1} width={170}/>);
+			columnDefs.push(<ColumnDefinition id="name" title="Name/ID" order={1} width={110}/>);
 			columnDefs.push(<ColumnDefinition id="rpm" title="RPM" order={2} width={80}/>);
-			columnDefs.push(<ColumnDefinition id="count" title="#reads" width={60}/>);
+			columnDefs.push(<ColumnDefinition id="desc" title="Description" width={350}/>);
+			//columnDefs.push(<ColumnDefinition id="count" title="#reads" width={60}/>);
 		}
 		else {
 			csvData = [ ['ID'] ];
 			for(let i = 0; i < this.props.data.experiments.length; i++) {
 				let srr = this.props.data.experiments[i];
-				csvData.push([srr.name]);
+				if(srr.name==="_LINEAR") { inLinear = true; this.props.data.experiments.splice(i,1); continue;} // remove _LINEAR from the result table
+				csvData.push([srr.name, srr.desc]);
 			}
-			columnDefs.push(<ColumnDefinition id="name" title="Name" order={1} width={170}/>);
+			columnDefs.push(<ColumnDefinition id="name" title="Name/ID" order={1} width={110}/>);
+			columnDefs.push(<ColumnDefinition id="desc" title="Description" width={350}/>);
 		}
+		let msgLinear;
+		if(inLinear) { msgLinear = <p>Warning: The query k-mer is also contained in a linear isoform.</p>; }
 		return  (
 			<div id="kmersearch_result" className="box">
 				<div className="closeIcon"><img id="clearResultsImg" onClick={this.props.clearHandler} src={require('./images/clear.png')} alt={'Clear results'} title={'Clear'}/><br/></div>
@@ -64,8 +72,9 @@ class KmerSearchResult extends React.Component {
 					</RowDefinition>
 				</Griddle>
 				<div className="csvLink">
-				<CSVLink data={csvData} separator={","} filename={"biq_"+this.props.data.query+".csv"}>Download CSV</CSVLink>
+				<CSVLink data={csvData} separator={","} filename={csv_filename}>Download CSV</CSVLink>
 				</div>
+				{msgLinear}
 			</div>
 		);
 	}
