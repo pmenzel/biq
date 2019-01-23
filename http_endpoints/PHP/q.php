@@ -2,9 +2,8 @@
 
 define("KIQ",'/path/to/kiq/bin/kiq');
 define("DBPATH",'/path/to/biq/database/');
-define("KMERINDEX",'kmerindex.bin');
-define("KMERCOUNTS",'kmercounts.bin');
-define("METADATA",'metadata.bin');
+define("KMERINDEX",'kmer_index.bin');
+define("KIQDATABASE",'kiq_database.bin');
 
 $doGET = ($_SERVER['REQUEST_METHOD']=="GET")?true:false;
 
@@ -34,7 +33,7 @@ else { // single k-mer submitted
 	}
 }
 
-$kiq_call = KIQ.' query -i '.DBPATH.KMERINDEX.' -k '.DBPATH.KMERCOUNTS.' -m '.DBPATH.METADATA.' -j '.$a.' -Q '.$q;
+$kiq_call = KIQ.' query -i '.DBPATH.KMERINDEX.' -k '.DBPATH.KIQDATABASE.' -j '.$a.' -Q '.$q;
 $kiq_out = array();
 $kiq_status;
 exec($kiq_call,$kiq_out,$kiq_status);

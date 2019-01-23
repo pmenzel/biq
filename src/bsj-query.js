@@ -44,9 +44,9 @@ class KmerSearchResult extends React.Component {
 				if(srr.name==="_LINEAR") { inLinear = true; this.props.data.experiments.splice(i,1); continue;} // remove _LINEAR from the result table
 				csvData.push([srr.name, srr.count, srr.rpm, srr.desc]);
 			}
-			columnDefs.push(<ColumnDefinition id="name" title="Name/ID" order={1} width={110}/>);
-			columnDefs.push(<ColumnDefinition id="rpm" title="RPM" order={2} width={80}/>);
-			columnDefs.push(<ColumnDefinition id="desc" title="Description" width={350}/>);
+			columnDefs.push(<ColumnDefinition key="name" id="name" title="Name/ID" order={1} width={110}/>);
+			columnDefs.push(<ColumnDefinition key="rpm" id="rpm" title="RPM" order={2} width={80}/>);
+			columnDefs.push(<ColumnDefinition key="desc" id="desc" title="Description" width={350}/>);
 			//columnDefs.push(<ColumnDefinition id="count" title="#reads" width={60}/>);
 		}
 		else {
@@ -56,8 +56,8 @@ class KmerSearchResult extends React.Component {
 				if(srr.name==="_LINEAR") { inLinear = true; this.props.data.experiments.splice(i,1); continue;} // remove _LINEAR from the result table
 				csvData.push([srr.name, srr.desc]);
 			}
-			columnDefs.push(<ColumnDefinition id="name" title="Name/ID" order={1} width={110}/>);
-			columnDefs.push(<ColumnDefinition id="desc" title="Description" width={350}/>);
+			columnDefs.push(<ColumnDefinition key="rpm"  id="name" title="Name/ID" order={1} width={110}/>);
+			columnDefs.push(<ColumnDefinition key="desc" id="desc" title="Description" width={350}/>);
 		}
 		let msgLinear;
 		if(inLinear) { msgLinear = <p>Warning: The query k-mer is also contained in a linear isoform.</p>; }
