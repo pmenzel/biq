@@ -12,9 +12,10 @@ BIQ builds on top of [KIQ](https://github.com/pmenzel/kiq), a software for index
 ![Flow chart](flowchart/BIQ_flow.png?raw=true "BIQ flow chart")
 
 An example installation can be found at [e-rna.org](http://e-rna.org/biq/) or at [GitHub](https://pmenzel.github.io/biq/).  
-It contains two BSJ indezes:
-1. Drosophila melanogaster, 103 RNA-Seq datasets from [Westholm et al 2014](https://www.ncbi.nlm.nih.gov/pubmed/25544350).
-2. Human, [2652 RNA-Seq data sets](http://www.cs.cmu.edu/~ckingsf/software/bloomtree/srr-list.txt), [UMAP plot](https://plot.ly/~pmenzel/13/#/) based on BSJ coverage in all 2652 data sets.
+It contains three BSJ indexes:
+1. Drosophila melanogaster, [103 RNA-Seq datasets](https://plot.ly/~pmenzel/15) from [Westholm et al 2014](https://www.ncbi.nlm.nih.gov/pubmed/25544350).
+2. Human, [386 SRA files](https://plot.ly/~pmenzel/17) from [ENCODE (only total RNA-Seq)](https://www.encodeproject.org/).
+3. Human, [2652 SRA files](https://plot.ly/~pmenzel/19) from [Solomon et al. 2016](https://www.ncbi.nlm.nih.gov/pubmed/26854477).
 
 
 ## Installation
