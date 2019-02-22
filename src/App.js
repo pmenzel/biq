@@ -64,7 +64,7 @@ class App extends Component {
 				this.setState({store_genes : r}, () => this.setState({ isLoading : false}));
 			} else {
 				console.error(xhr.statusText);
-				this.setState({isLoading:false, isError:true, error_msg:'Error while getting file "'+this.props.genes_url+'": '+xhr.statusText});
+				this.setState({isLoading:false, isError:true, error_msg:'Error while getting file "'+this.state.genes_url+'": '+xhr.statusText});
 			}
     }
 		xhr.send();
