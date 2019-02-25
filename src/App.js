@@ -4,14 +4,13 @@ import 'react-dropdown/style.css'
 import ReactLoading from 'react-loading';
 import KmerInfoBody from './kmer-info.js';
 import BSJQueryBody from './bsj-query.js';
-import './App.css';
 import './text.css';
 import './layout.css';
 
 const conf = require('./conf');
 const dd_mode_options =  [ { value:"query", label:'Query datasets' }, { value: "kmerinfo", label:'K-mer info' } ];
 const dd_mode_default = "query";
-const subtitles = { "query":'Query SRA RNA-seq datasets for backsplice junctions', "kmerinfo":'K-mer info' };
+const subtitles = { "query":'Query RNA-seq datasets for backsplice junctions', "kmerinfo":'K-mer info' };
 
 class HeaderBox extends Component {
   render() {

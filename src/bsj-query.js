@@ -196,7 +196,7 @@ class KmerSearch extends React.Component {
 			return (
 				<div>
 					<div className="box" id="container_kmerquery">
-						<h3>Search in SRA</h3>
+						<h3>Search k-mer in index</h3>
 						<div className="input1"><span className="span_selectedtext">{this.props.exon5p.last16}</span></div>
 						<div className="input2"><span className="span_selectedtext">{this.props.exon3p.first16}</span></div>
 						<button id="HttpSearchButton" onClick={this.startWebSearch} disabled={!(this.props.exon3p.first16 && this.props.exon5p.last16)}>Search</button>
@@ -210,7 +210,7 @@ class KmerSearch extends React.Component {
 		else {
 			return (
 				<div className="box" id="container_kmerquery">
-					<h3>Search in SRA</h3>
+					<h3>Search k-mer in index</h3>
 				</div>
 			);
 		}
@@ -232,7 +232,7 @@ class GeneInfo extends React.Component {
 		if(this.props.gene === null) {
 			return (
 				<div className="box" id="container_geneinfo">
-					<h3>Selected Gene</h3>
+					<h3>Compose query BSJ k-mer</h3>
 					<p></p>
 				</div>
 			);
@@ -240,8 +240,8 @@ class GeneInfo extends React.Component {
     else {
 			return (
 				<div className="box" id="container_geneinfo">
-					<h3>Selected Gene</h3>
-					<div id="div_selectedgenename"><span className="span_selectedtext">{this.props.gene.name}</span></div> 
+					<h3>Compose query BSJ k-mer</h3>
+					<div id="div_selectedgenename"><span className="span_selectedtext">{this.props.gene.name}</span></div>
 				</div>
 			);
     }
@@ -357,18 +357,17 @@ export default class BSJQueryBody extends React.Component {
 	 if(exon.first16.length !== 16) { return; }
     if(pos==='3p') {
 			const oldExon = this.state.selectedExon3p;
-			oldExon.color3p='';
+			oldExon.color3p='black';
 			this.setState({oldExon});
 			//exon.color3p = "#3E31BD";
-			exon.color3p = "#232e9c";
+			exon.color3p = "#d1392f";
 			this.setState({ selectedExon3p : exon});
 		}
 		else {
 			const oldExon = this.state.selectedExon5p;
-			oldExon.color5p='';
+			oldExon.color5p='black';
 			this.setState({oldExon});
-			//exon.color5p = "#FF3600";
-			exon.color5p = "#9c232e";
+			exon.color5p = "#2f76d1";
 			this.setState({ selectedExon5p : exon});
 		}
 	}
@@ -378,7 +377,7 @@ export default class BSJQueryBody extends React.Component {
 					<div>
 						<div id="leftcol">
 							<div id="container_genesearch" className="box">
-								<h3>Search for gene by name</h3>
+								<h3>Search gene by name</h3>
 								<GeneSearchInput filterText={this.state.filterText} changeHandler={this.handleUserInput} />
 							</div>
 							<GeneSearchTable storeGenes={this.props.storeGenes} filterText={this.state.filterText} clickHandler={this.changeGeneId} />

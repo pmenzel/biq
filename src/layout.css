@@ -1,24 +1,24 @@
 body {
-  /*background:#f0f0f0;*/
-  background:#59568b;
+  /*background:#59568b;*/
+  background:#f7f9fb;
 }
 
 #header {
-	/*background:#FF7F5E;*/
-	background:#af9ac8;
+	/*background:#af9ac8;*/
+	background:#5085a5;
 }
 
 #leftcol .box {
-	/*background:#8DDBB3;*/
-	background:#ca88ad;
+	/* background:#ca88ad; */
+	background:#8fc1e3;
 }
 #midcol .box {
-	/*background:#CEFFAD;*/
-	background:#ca88ad;
+	/*background:#ca88ad;*/
+	background:#8fc1e3;
 }
 #rightcol .box {
-	/*background:#FFFF9D;*/
-	background:#ec9cb0;
+	/*background:#ec9cb0;*/
+	background:#8fc1e3;
 }
 
 .box {
@@ -140,7 +140,8 @@ body {
   z-index: 10;
   padding: 10px 42px 10px 10px;
   color: #fff;
-  background: url('./images/blacktocat.png') #626096 no-repeat 95% 50%;
+  /*background: url('./images/blacktocat.png') #626096 no-repeat 95% 50%;*/
+  background: url('./images/blacktocat.png') #31708e no-repeat 95% 50%;
   /*background: url('./images/blacktocat.png') #0090ff no-repeat 95% 50%;*/
   font-weight: 700;
   box-shadow: 0 0 5px rgba(0,0,0,.5);

@@ -90,7 +90,7 @@ class KmerInfo extends Component {
 					<div id="div_selectedgenename"><span className="span_selectedtext">{this.props.kmer}</span></div>
 				</div>
 				<div id="container_transcripts" className="box">
-					<table className="table_searchresults">
+					<table id="table_searchresults">
 						<thead>
 							<tr>
 								<th>Gene</th>

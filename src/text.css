@@ -1,3 +1,11 @@
+#header {
+	color: white;
+}
+
+input {
+	background:#f7f9fb;
+}
+
 .smallText {
 	font-size:80%;
 }
@@ -6,6 +14,10 @@
 }
 .warning {
 	color:#E34234;
+}
+
+h3, h4, h5 {
+	color:#144a64;
 }
 
 .csvLink {
@@ -42,7 +54,7 @@ ol li a {
 	font-weight:bold;
 	font-family:Sans-serif;
 	font-size:80%;
-	color:#514b81;
+	color:#144a64;
 	padding:2px 5px 2px 5px;
 }
 
@@ -67,19 +79,24 @@ ol li a {
 	cursor:crosshair;
 }
 
-.table_searchresults th {
+#table_searchresults th {
 	padding:2px 20px 2px 0px;
 	text-align:left;
 }
-.table_searchresults td {
+#table_searchresults td {
 	padding:2px 20px 2px 0px;
 }
 
-.table_searchresults td a {
+#table_searchresults a:link {
 	text-decoration:none;
 	color:black;
 }
-.table_searchresults td a:hover {
+
+#table_searchresults a:visited {
+	color:black;
+}
+
+#table_searchresults a:hover {
 	text-decoration:underline;
 	color:black;
 }
@@ -108,9 +125,9 @@ h4 {
 	display:inline-block;
 	font-family:Courier;
 	font-size:100%;
-	color:#9c232e;
 	height:18pt;
-	background:#f3f3f3;
+	background:#f7f9fb;
+	color:#d1392f;
 	border:1px solid #aaa;
 	border-radius: 2px;
 	margin-right:3px;
@@ -124,10 +141,10 @@ h4 {
 	text-align:left;
 	font-family:Courier;
 	font-size:100%;
-	color:#232e9c;
+	color:#2f76d1;
 	min-width:10em;
 	height:18pt;
-	background:#f3f3f3;
+	background:#f7f9fb;
 	border:1px solid #aaa;
 	border-radius: 2px;
 	margin-right:6px;
@@ -135,10 +152,12 @@ h4 {
 
 #input_genesearch {
 	width:15em;
+	height:18pt;
 }
 
 #input_kmersearch {
 	width:25em;
+	height:18pt;
 }
 
 #HttpSearchButton {
