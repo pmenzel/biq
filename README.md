@@ -6,6 +6,7 @@ Back-splice junction indexing and querying
 
 BIQ is a tool for searching k-mers that span backsplice junctions (BSJs) in a large collection of RNA-Seq experiments.
 The main use case is to identify experiments in which a particular circular RNA, identified by its backsplice junction, is expressed.
+The method is described in the [manuscript on bioRxiv](https://www.biorxiv.org/content/10.1101/556993v1).
 
 BIQ builds on top of [KIQ](https://github.com/pmenzel/kiq), a software for indexing and querying k-mers in sequencing data sets.
 
