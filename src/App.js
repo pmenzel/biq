@@ -70,7 +70,7 @@ class App extends Component {
 
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		this.load_genes();
 	}
 
@@ -109,7 +109,7 @@ class App extends Component {
 			return (
 				<div id="outer">
 					<HeaderBox mode={this.state.mode} genes_url={this.state.genes_url} changeHandlerGenome={this.change_genome} selected_genome={this.state.selected_genome} changeHandlerMode={this.change_mode} selected_mode={this.state.mode} />
-					<div id="loading"> <ReactLoading type={"spin"} /></div>
+					<div id="loading"><ReactLoading color={"#8fc1e3"} type={"spin"} /></div>
 				</div>
 			);
 
